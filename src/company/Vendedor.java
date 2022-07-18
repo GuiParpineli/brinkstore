@@ -1,18 +1,26 @@
+package company;
+
+import cliente.Cliente;
+import produto.Produto;
+
 /**
- * Vendedor
+ * company.Vendedor
  */
 public class Vendedor {
 
     private String nome;
     private String cpf;
     private String contato;
+
+    private Empresa empresa;
     private int comissao;
     private Pedido pedido = new Pedido();
 
-    public Vendedor(String nome, String cpf, int comissao) {
+    public Vendedor(String nome, String cpf, int comissao, Empresa empresa) {
         this.nome = nome;
         this.cpf = cpf;
         this.comissao = comissao;
+        this.empresa = empresa;
     }
 
     public void efetuarPedido(Cliente cliente) {
@@ -39,5 +47,9 @@ public class Vendedor {
         } else {
             throw new RuntimeException("Nao Pode ter Desconto");
         }
+    }
+
+    public Empresa getEmpresa() {
+        return empresa;
     }
 }

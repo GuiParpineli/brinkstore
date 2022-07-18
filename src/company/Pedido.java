@@ -1,8 +1,13 @@
+package company;
+
+import cliente.Cliente;
+import produto.Produto;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Pedido
+ * company.Pedido
  */
 public class Pedido {
 
@@ -37,7 +42,7 @@ public class Pedido {
         this.produtos.add(produto);
     }
 
-    public double getValorTotal() {
+    public double getValorTotal() {     //metodo para calcular preco total no array de produtos
         for (Produto e : this.produtos) {
             this.valorTotal += e.getValor();
         }
@@ -51,10 +56,6 @@ public class Pedido {
         }
         System.out.println(this.vendedor.getNome() + " , seu pedido contem os seguintes itens :");
         return produtosnome;
-    }
-
-    public void setProdutos(List produtos) {
-        this.produtos = produtos;
     }
 
 }

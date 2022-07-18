@@ -1,5 +1,9 @@
+package cliente;
+
+import cliente.Cliente;
+
 /**
- * ClienteFisico
+ * cliente.ClienteFisico
  */
 public class ClienteFisico extends Cliente {
 
