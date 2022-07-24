@@ -5,9 +5,9 @@ public class Utilidade implements Produto {
     private String nome;
     private Double valor;
 
-    private int unidEmbalagem;
+    private Integer unidEmbalagem;
 
-    public Utilidade(String nome, Double valor, int unidEmbalagem) {
+    public Utilidade(String nome, Double valor, Integer unidEmbalagem) {
         this.nome = nome;
         this.valor = valor;
         this.unidEmbalagem = unidEmbalagem;

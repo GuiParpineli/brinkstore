@@ -2,7 +2,9 @@ package company;
 
 import cliente.Cliente;
 import produto.Produto;
+import produto.Utilidade;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,8 +22,14 @@ public class Empresa {
 
     private List<Produto> produtos = new ArrayList<>();
 
-    public void addProduto(Produto produto) {
-        this.produtos.add(produto);
+    public void addProdUtilidade() {
+        String name =  JOptionPane.showInputDialog("Nome do Produto");
+        Double valor = Double.valueOf(JOptionPane.showInputDialog("Valor do Produto"));
+        int undEmbalagem = Integer.parseInt(JOptionPane.showInputDialog("Quantos por kit"));
+
+        Utilidade utilidade = new Utilidade(name, valor, undEmbalagem);
+
+        this.getProdutos().add(utilidade);
     }
 
     public void addVendedor(Vendedor vendedor) {

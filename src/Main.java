@@ -22,28 +22,10 @@ public class Main {
         Boolean imetro;
         int unidadeEmbal;
 
-        // Obtendo dados para inserir o produto
-        System.out.println("Digite o Brinquedo:");
-        brinquedoName = scanner.nextLine();
-        System.out.println("Digite o valor:");
-        valor = scanner.nextDouble();
-        System.out.println("Possui IMETRO?");
-        imetro = scanner.nextBoolean();
-
-        // Obtendo dados produto 2
-        System.out.println("Digite o Produto: ");
-        brinquedoName = scanner.next();
-        System.out.println("Digite o valor:");
-        valorUtil = scanner.nextDouble();
-        System.out.println("Quantas unidades por embalagem?");
-        unidadeEmbal = scanner.nextInt();
-
-        Brinquedo brinquedo = new Brinquedo(brinquedoName, valor, imetro);
-        Utilidade utilidade = new Utilidade(utilidadeName, valorUtil, unidadeEmbal);
 
         // adiocionando produtos na empresa
-        brinkStore.addProduto(brinquedo);
-        brinkStore.addProduto(utilidade);
+        brinkStore.addProdUtilidade();
+        brinkStore.addProdUtilidade();
 
         // add vendedor
         Vendedor jao = new Vendedor("Jao", "4201.3123-00", 10, brinkStore);
